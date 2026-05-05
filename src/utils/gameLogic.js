@@ -1,5 +1,5 @@
 // src/utils/gameLogic.js
-const BOARD_SIZE = 24;
+const BOARD_SIZE = 20;
 
 export const createEmptyBoard = () => {
   return Array(BOARD_SIZE).fill(null).map(() => Array(BOARD_SIZE).fill(null));
