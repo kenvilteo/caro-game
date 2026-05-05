@@ -1,0 +1,54 @@
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border-right: 1px solid var(--cell-border);
+  border-bottom: 1px solid var(--cell-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: calc(var(--cell-size) * 0.75);
+  font-weight: 800;
+  transition: all 0.2s ease;
+  user-select: none;
+  background-color: transparent;
+}
+
+.cell:hover {
+  background-color: var(--cell-hover);
+}
+
+.mark-x {
+  color: var(--color-x);
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mark-o {
+  color: var(--color-o);
+  text-shadow: 0 0 12px rgba(244, 63, 94, 0.8);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.winning-cell {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  animation: pulseWin 1.5s infinite;
+  position: relative;
+  z-index: 10;
+}
+
+.winning-cell .mark-x, .winning-cell .mark-o {
+  transform: scale(1.1);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulseWin {
+  0% { box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.4); }
+  100% { box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2); }
+}

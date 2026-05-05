@@ -1,0 +1,12 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--cell-border);
+  border-left: 1px solid var(--cell-border);
+  border-radius: 4px;
+}
+
+.board-row {
+  display: flex;
+}
