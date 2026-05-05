@@ -1,4 +1,4 @@
-// src/utils/gameLogic.js
+// src/utils/gameLogic.js s
 const BOARD_SIZE = 20;
 
 export const createEmptyBoard = () => {
